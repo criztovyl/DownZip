@@ -22,8 +22,8 @@ After:
 
 #LINKS
 
-[Homepage] (http://www.joinout.de/dlandunzip)
-[GitHub] (http://github.com/criztovyl/dlandunzip)
+[Homepage] (http://www.joinout.de/dlunzip)  
+[GitHub] (http://github.com/criztovyl/dlunzip)
 
 #LICENSE
 
@@ -44,6 +44,6 @@ After:
 
 Written by Christoph "criztovyl" Schulz, <ch.schulz@joinout.de>
 
-[Homepage] (http://criztovyl.joinout.de)
+[Homepage] (http://criztovyl.joinout.de)  
 [GitHub] (http://github.com/criztovyl)
 
