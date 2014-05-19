@@ -7,7 +7,7 @@ Extract the archive and upload DLUnzip.php and/or DLUnzipSecured.php to your web
 
 == CONFIGURATION ==
 
-For dlandunzip.php you need no configuration, simply upload and start!
+For DLUnzip.php you need no configuration, simply upload and start!
 
 In the secured version you have to insert an key into the "auth_keys" array. Each key as a string with quotation marks, seperated by "," inside the bracelets.
 
@@ -19,8 +19,8 @@ $auth_keys = array("key1", "key2", "key3");
 
 == LINKS ==
 
-Homepage:   http://www.joinout.de/dlandunzip
-GitHub:     http://github.com/criztovyl/dlandunzip
+Homepage:   http://www.joinout.de/dlunzip
+GitHub:     http://github.com/criztovyl/dlunzip
 
 == LICENSE ==
 
