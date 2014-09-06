@@ -13,9 +13,13 @@ In the secured version you have to insert an key into the "auth_keys" array. Eac
 
 Example:
 Before:
-$auth_keys = array();
+    $auth_keys = array();
 After:
-$auth_keys = array("key1", "key2", "key3");
+    $auth_keys = array("key1", "key2", "key3");
+
+===COOKIES===
+
+There is a text-field where you can enter cookies :)
 
 == LINKS ==
 

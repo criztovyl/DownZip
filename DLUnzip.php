@@ -1,7 +1,7 @@
-<?php //DLUnzip Version from 18.05.2014 ?>
+<?php //DLUnzip Version from 06.09.2014 ?>
 <!--
-    This script downloads a ZIP file and extract it.
-    Copyright (C) 2014 Christoph Schulz
+    This script downloads a ZIP file and extracts it.
+    Copyright (C) 2014 Christoph 'criztovyl' Schulz
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -25,7 +25,7 @@
 </head>
 <body>
 <?php
-error_reporting(E_ALL);
+//error_reporting(E_ALL);
 $zip_err = array("0"=>"No error ", "1"=>"Multi-disk zip archives not supported ", "2"=>"Renaming temporary file failed ", "3"=>"Closing zip archive failed ", "4"=>"Seek error ", "5"=>"Read error ", "6"=>"Write error ", "7"=>"CRC error ", "8"=>"Containing zip archive was closed ", "9"=>"No such file ", "10"=>"File already exists ", "11"=>"Can't open file ", "12"=>"Failure to create temporary file ", "13"=>"Zlib error ", "14"=>"Malloc failure ", "15"=>"Entry has been changed ", "16"=>"Compression method not supported ", "17"=>"Premature EOF ", "18"=>"Invalid argument ", "19"=>"Not a zip archive ", "20"=>"Internal error ", "21"=>"Zip archive inconsistent ", "22"=>"Can't remove file ", "23"=>"Entry has been deleted ");
 if(isset($_POST['url'])):
 ?>
@@ -43,7 +43,10 @@ if(isset($_POST['url'])):
     
     curl_setopt($ch, CURLOPT_FILE, $fp);
     curl_setopt($ch, CURLOPT_HEADER, 0);
-    
+
+    if(isset($_POST['dlunzip_cookies']))
+        curl_setopt($ch, CURLOPT_COOKIE, $_POST['dlunzip_cookies']);
+
     curl_exec($ch);
     $curlerr = curl_error($ch);
     if($curlerr != ''):
@@ -87,9 +90,10 @@ if(isset($_POST['url'])):
 else:
 ?>
 <form method="POST" style="height: 200px; width: 50%; margin: 10% auto; text-align: center;">
-<label for="url">URL:</label><br>
+<label for="url">URL</label><br>
 <input type="text" name="url" style="width: 100%"><br>
-<label for="auth_key">Auth Key</label><br><input type="text" name="auth_key"><br>
+<label for="dlunzip_cookies">Cookies</label><br>
+<input type="text" name="dlunzip_cookies" style="with: 33%"><br>
 <input type="submit" value="Submit" style="margin-right: 30%; margin-top: 30px;">
 </form>
 <?php endif;?>
