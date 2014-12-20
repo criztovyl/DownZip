@@ -1,6 +1,6 @@
 #ABOUT
 DLUnzip is a PHP script which downloads a ZIP and extracts it.
-There is a secured and unsecured version. In the secured you need a Auth\_Key to start the Download, the keys are defined in the file. (See [Configuration](#configuration).
+There is a secured and unsecured version. In the secured you need a Auth\_Key to start the Download, the keys are defined in the file. (See [Configuration](#configuration)).
 
 #INSTALL
 Extract the archive and upload DLUnzip.php and/or DLUnzipSecured.php to your webspace.
